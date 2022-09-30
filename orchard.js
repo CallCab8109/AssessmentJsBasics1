@@ -48,14 +48,38 @@ const pinkPrice = .55
 
     Log `totalAcres` to the console.
 */
+let sum = 0;
 
-// CODE HERE
+for(i = 0; i < fujiAcres.length; i++){
+sum += fujiAcres[i];
+}
+
+let sum1 = 0
+for(i = 0; i < galaAcres.length; i++){
+    sum1 += galaAcres[i];
+}
 
 
+let sum2 = 0
+for(i = 0; i < pinkAcres.length; i++){
+    sum2 += pinkAcres[i];
+}
+
+let totalAcres = (sum + sum1 + sum2)
+
+// console.log(sum)
+// console.log(sum1)
+// console.log(sum2)
+
+// console.log(totalAcres)
+
+
+//COMMENT: On this problem i used for loops to add up all the numbers individually and then i created a variable to give me the grand total after using new variables for each of the individual totals
 
 
 
 // PROBLEM 2
+
 
 /*
     Using `totalAcres`, calculate the average 
@@ -67,7 +91,13 @@ const pinkPrice = .55
     Log `averageDailyAcres` to the console.
 */
 
-// CODE HERE
+const averageDailyAcres = (totalAcres / 7)
+// console.log(averageDailyAcres)
+
+
+
+
+//COMMENT: on this problem i used the constant of the average daily acres and divided it by each day of the week
 
 
 
@@ -105,7 +135,18 @@ const pinkPrice = .55
 let acresLeft = 174 
 let days = 0
 
-// CODE HERE
+while (acresLeft > 0){
+    acresLeft -= 9
+    days += 1
+}
+
+// console.log(`${days} days to clear the remaining acres`)
+
+
+
+
+//COMMENT: i used some simple math, 2 variables and a while loop to simply subtract 9 and add 1
+
 
 
 
@@ -133,13 +174,43 @@ let days = 0
     values to the new arrays.
 */
 
-// CODE HERE
-
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiAcres2 = fujiAcres.slice(0, 7)
+let galaAcres2 = galaAcres.slice(0, 7)
+let pinkAcres2 = pinkAcres.slice(0, 7)
 
 
+
+for(i = 0; i < fujiAcres2.length; i++){
+    fujiAcres2[i] *= 6.5
+
+}
+
+
+for(i = 0; i < galaAcres2.length; i++){
+    galaAcres2[i] *= 6.5
+
+}
+
+
+for(i = 0; i < pinkAcres2.length; i++){
+    pinkAcres2[i] *= 6.5
+
+}
+
+
+
+let fujiTons = fujiAcres2
+let galaTons = galaAcres2
+let pinkTons = pinkAcres2
+
+// console.log(fujiTons)
+// console.log(galaTons)
+// console.log(pinkTons)
+// console.log(fujiTons)
+
+
+
+//COMMENT: this problem took me quite a while but i was able to create new variables to do the math without interfereing with my other variables. from there it was just math syntax 
 
 
 
@@ -159,16 +230,41 @@ let days = 0
 
     Hint: there are 2000 pounds in a ton.
 */
+let fujiTons2 = fujiTons.slice(0, 7)
+let galaTons2 = galaTons.slice(0, 7)
+let pinkTons2 = pinkTons.slice(0, 7)
 
-// CODE HERE 
+let ton1 = 0
+for(i = 0; i < fujiAcres.length; i++){
+    ton1 += fujiAcres[i];
+    }
+    
+    let ton2 = 0
+    for(i = 0; i < galaAcres.length; i++){
+        ton2 += galaAcres[i];
+    }
+    
+    
+    let ton3 = 0
+    for(i = 0; i < pinkAcres.length; i++){
+        ton3 += pinkAcres[i];
+    }
+    
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+
+let fujiPounds = (ton1 * 2000)
+let galaPounds = (ton2 * 2000)
+let pinkPounds = (ton3 * 2000)
+
+
+// console.log(fujiPounds)
+// console.log(galaPounds)
+// console.log(pinkPounds)
 
 
 
 
+//COMMENT: fairly similar to the last problems combined i had to create some new variables and do math step by step within the code
 
 
 // PROBLEM 6
@@ -189,13 +285,15 @@ let days = 0
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = (fujiPounds * fujiPrice)
+let galaProfit = (galaPounds * galaPrice)
+let pinkProfit = (pinkPounds * pinkPrice)
 
+// console.log(`$${fujiProfit}`)
+// console.log(`$${galaProfit}`)
+// console.log(`$${pinkProfit}`)
 
-
-
+//COMMENT: just did some simple multiplication of variables
 
 
 // PROBLEM 7
@@ -208,4 +306,10 @@ let days = 0
     Log `totalProfit` to the console.
 */
 
-// CODE HERE
+let totalProfit = (fujiProfit + galaProfit + pinkProfit)
+
+// console.log(`$${totalProfit}`)
+
+
+
+//COMMENT: a little bit of addition and for a small challenge i added a price tag
